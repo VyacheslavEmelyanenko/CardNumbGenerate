@@ -7,11 +7,14 @@ import java.util.Random;
 public class CardGenerate {
     private static final Random RNG = new Random(System.currentTimeMillis());
 
-    private static final int CARD_NUMBER_LENGTH = 16;//Зависит от типа карты
+    //private static final int CARD_NUMBER_LENGTH = 16;
     private static final int DIGIT_UPPER_LIMIT = 10;
+    private int CARD_NUMBER_LENGTH;//Зависит от типа карты
 
-    public String generate(String bankIdNumber) {
+    public String generate(String bankIdNumber, int NumberLength) {
+        CARD_NUMBER_LENGTH = NumberLength;
         int randomNumberLength = CARD_NUMBER_LENGTH - (bankIdNumber.length() + 1);
+        //int randomNumberLength = CARD_NUMBER_LENGTH - (bankIdNumber.length() + 1);
 
         StringBuilder builder = new StringBuilder(bankIdNumber);
 
