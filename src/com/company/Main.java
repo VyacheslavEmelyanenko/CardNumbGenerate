@@ -14,12 +14,24 @@ public class Main {
     }
 
     public static Card getCardForType(String typeCard){
-        if(typeCard.equals("Visa"))
-            return new CardVisa();
-        else if(typeCard.equals("MasterCard"))
-            return new CardMasterCard();
-        else if(typeCard.equals("Mir"))
-            return new CardMir();
+        if(typeCard.equals("CardVisaGold"))
+            return new CardVisaGold();
+        else if(typeCard.equals("CardVisaClassic"))
+            return new CardVisaClassic();
+        else if(typeCard.equals("CardVisaElectron"))
+            return new CardVisaElectron();
+        else if(typeCard.equals("CardMasterCardMasterCard"))
+            return new CardMasterCardMasterCard();
+        else if(typeCard.equals("CardMasterCardElectronic"))
+            return new CardMasterCardElectronic();
+        else if(typeCard.equals("CardMasterCardMaestro"))
+            return new CardMasterCardMaestro();
+        else if(typeCard.equals("CardMirClassic"))
+            return new CardMirClassic();
+        else if(typeCard.equals("CardMirPremium"))
+            return new CardMirPremium();
+        else if(typeCard.equals("CardMirDebet"))
+            return new CardMirDebet();
 
         throw new RuntimeException("Карта данной платежной системы неизвестна: "+ typeCard);
     }
