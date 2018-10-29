@@ -7,7 +7,6 @@ import java.util.Random;
 public class CardGenerate {
     private static final Random RNG = new Random(System.currentTimeMillis());
 
-    //private static final int CARD_NUMBER_LENGTH = 16;
     private static final int DIGIT_UPPER_LIMIT = 10;
     private int CARD_NUMBER_LENGTH;//Зависит от типа карты
 
