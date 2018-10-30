@@ -1,10 +1,11 @@
-package com.company;
+package com.company.valid;
+
 /*
 *A class that implements the Luhn algorithm
 */
 public class LuhnValidate extends CardValidate {
     @Override
-    protected boolean validateCard(String cardNumber) {
+    public boolean validateCard(String cardNumber) {
         if (luhn(cardNumber))
             return (next != null ? next.validateCard(cardNumber) : true);
         else

@@ -1,8 +1,11 @@
-package com.company;
+package com.company.masterCard;
 
-public class CardMasterCardMaestro implements CardMasterCardInterf {
+import com.company.generate.CardGenerate;
+
+public class CardMasterCardMaestro implements ICardMasterCard {
 
     private String numberFirst = "5";
+    private String number25 = "2222";
     private int numberLength = 16;
 
     @Override

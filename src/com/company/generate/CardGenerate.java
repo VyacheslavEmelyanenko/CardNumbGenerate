@@ -1,4 +1,4 @@
-package com.company;
+package com.company.generate;
 
 import java.util.Random;
 
@@ -13,13 +13,12 @@ public class CardGenerate {
     public String generate(String bankIdNumber, int NumberLength) {
         CARD_NUMBER_LENGTH = NumberLength;
         int randomNumberLength = CARD_NUMBER_LENGTH - (bankIdNumber.length() + 1);
-        //int randomNumberLength = CARD_NUMBER_LENGTH - (bankIdNumber.length() + 1);
 
         StringBuilder builder = new StringBuilder(bankIdNumber);
 
-        for (int i = 0; i < randomNumberLength; i++)
+        for (int i = 0; i < randomNumberLength; i++) {
             builder.append(RNG.nextInt(DIGIT_UPPER_LIMIT));
-
+        }
         //Add the missing number
         builder.append(getCheckDigit(builder.toString()));//
 
@@ -30,16 +29,13 @@ public class CardGenerate {
         int sum = 0;
         for (int i = 0; i < numberCard.length(); i++) {
             int digit = Integer.parseInt(numberCard.substring(i, (i + 1)));
-
             if ((i % 2) == 0) {
                 digit = digit * 2;
-
                 if (digit > 9)
                     digit = (digit / 10) + (digit % 10);
             }
             sum += digit;
         }
-
         int mod = sum % 10;
 
         return ((mod == 0) ? 0 : 10 - mod);

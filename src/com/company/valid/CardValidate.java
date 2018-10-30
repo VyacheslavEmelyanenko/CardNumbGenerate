@@ -1,6 +1,6 @@
-package com.company;
+package com.company.valid;
 /*
-*Abstract class that implements the validation
+*Abstract class that implements the validat
  */
 public abstract class CardValidate {
     protected CardValidate next;
@@ -9,5 +9,5 @@ public abstract class CardValidate {
         next = validator;
     }
 
-    protected abstract boolean validateCard(String cardNumber);
+    public abstract boolean validateCard(String cardNumber);
 }
