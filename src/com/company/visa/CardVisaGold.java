@@ -1,11 +1,13 @@
-package com.company;
+package com.company.visa;
 
-public class CardMirPremium implements CardMirInterf{
+import com.company.generate.CardGenerate;
+
+public class CardVisaGold implements ICardVisa {
 
     private String number15 = "";
-    private String numberFirst = "2";
-    private String number25 = "6666";
-    private int numberLength = 17;
+    private String numberFirst = "4";
+    private String number25 = "9999";
+    private int numberLength = 16;
 
     @Override
     public String getNumber() {

@@ -1,6 +1,8 @@
-package com.company;
+package com.company.visa;
 
-public class CardVisaElectron implements CardVisaInterf {
+import com.company.generate.CardGenerate;
+
+public class CardVisaElectron implements ICardVisa {
 
     private String number15 = "";
     private String numberFirst = "4";

@@ -1,10 +1,12 @@
-package com.company;
+package com.company.mir;
 
-public class CardVisaClassic implements CardVisaInterf {
+import com.company.generate.CardGenerate;
+
+public class CardMirClassic implements ICardMir {
 
     private String number15 = "";
-    private String numberFirst = "4";
-    private String number25 = "7777";
+    private String numberFirst = "2";
+    private String number25 = "4444";
     private int numberLength = 16;
 
     @Override

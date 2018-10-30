@@ -1,11 +1,13 @@
-package com.company;
+package com.company.mir;
 
-public class CardMasterCardElectronic implements CardMasterCardInterf {
+import com.company.generate.CardGenerate;
+
+public class CardMirPremium implements ICardMir {
 
     private String number15 = "";
-    private String numberFirst = "5";
-    private String number25 = "1111";
-    private int numberLength = 19;
+    private String numberFirst = "2";
+    private String number25 = "6666";
+    private int numberLength = 17;
 
     @Override
     public String getNumber() {

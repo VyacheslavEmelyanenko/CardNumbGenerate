@@ -1,6 +1,8 @@
-package com.company;
+package com.company.mir;
 
-public class CardMirDebet implements CardMirInterf{
+import com.company.generate.CardGenerate;
+
+public class CardMirDebet implements ICardMir {
 
     private String number15 = "";
     private String numberFirst = "2";
