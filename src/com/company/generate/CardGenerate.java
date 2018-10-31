@@ -2,14 +2,23 @@ package com.company.generate;
 
 import java.util.Random;
 
-//В зависимости от типа карты(длинны её номера) в метод generate сбрасывать два параметра bankIdNumber и CARD_NUMBER_LENGTH.
-//bankIdNumber предворительно формировать от типа карты.
+/**
+ *Class generating number card
+ */
 public class CardGenerate {
     private static final Random RNG = new Random(System.currentTimeMillis());
 
     private static final int DIGIT_UPPER_LIMIT = 10;
-    private int CARD_NUMBER_LENGTH;//Зависит от типа карты
 
+    /**Depends on the type of card*/
+    private int CARD_NUMBER_LENGTH;
+
+    /**
+     * Method generating random number
+     * @param bankIdNumber BIN number card
+     * @param NumberLength length number card
+     * @return number card
+     */
     public String generate(String bankIdNumber, int NumberLength) {
         CARD_NUMBER_LENGTH = NumberLength;
         int randomNumberLength = CARD_NUMBER_LENGTH - (bankIdNumber.length() + 1);
@@ -19,12 +28,12 @@ public class CardGenerate {
         for (int i = 0; i < randomNumberLength; i++) {
             builder.append(RNG.nextInt(DIGIT_UPPER_LIMIT));
         }
-        //Add the missing number
-        builder.append(getCheckDigit(builder.toString()));//
+        /**Add the missing number*/
+        builder.append(getCheckDigit(builder.toString()));
 
         return builder.toString();
     }
-    //Find the missing number for true
+    /**Method find the missing number for true*/
     private int getCheckDigit(String numberCard) {
         int sum = 0;
         for (int i = 0; i < numberCard.length(); i++) {

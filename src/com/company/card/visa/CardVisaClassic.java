@@ -1,12 +1,19 @@
-package com.company.mir;
+package com.company.card.visa;
 
 import com.company.generate.CardGenerate;
 
-public class CardMirClassic implements ICardMir {
+/**
+ * Class creating CardMasterCardElectronic
+ */
+public class CardVisaClassic implements ICardVisa {
 
-    private String numberFeaCard = "4444";
+    private String numberFeaCard = "7777";
     private int numberLength = 16;
 
+    /**
+     *Method generating number card
+     * @return number card
+     */
     @Override
     public String getNumber() {
         String numberBIN = NUMBERFIRST + numberFeaCard;
