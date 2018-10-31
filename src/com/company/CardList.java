@@ -2,7 +2,7 @@ package com.company;
 
 import com.company.card.masterCard.CardMasterCardElectronic;
 import com.company.card.masterCard.CardMasterCardMaestro;
-import com.company.card.masterCard.CardMasterICardMasterCard;
+import com.company.card.masterCard.CardMasterCardStandard;
 import com.company.card.mir.CardMirClassic;
 import com.company.card.mir.CardMirDebet;
 import com.company.card.mir.CardMirPremium;
@@ -17,7 +17,7 @@ public enum CardList {
     CARDVISAGOLD(CardVisaGold.class),
     CARDVISACLASSIC(CardVisaClassic.class),
     CARDVISAELECTRON(CardVisaElectron.class),
-    CARDMASTERCARDMASTERCARD(CardMasterICardMasterCard.class),
+    CARDMASTERCARDSTANDARD(CardMasterCardStandard.class),
     CARDMASTERCARDELECTRONIC(CardMasterCardElectronic.class),
     CARDMASTERCARDMAESTRO(CardMasterCardMaestro.class),
     CARDMIRCLASSIC(CardMirClassic.class),
