@@ -29,25 +29,7 @@ public class CardGenerate {
         for (int i = 0; i < randomNumberLength; i++) {
             builder.append(RNG.nextInt(DIGIT_UPPER_LIMIT));
         }
-        /**Add the missing number*/
-        //builder.append(getCheckDigit(builder.toString()));
 
         return builder.toString();
-    }
-    /**Method find the missing number for true*/
-    private int getCheckDigit(String numberCard) {
-        int sum = 0;
-        for (int i = 0; i < numberCard.length(); i++) {
-            int digit = Integer.parseInt(numberCard.substring(i, (i + 1)));
-            if ((i % 2) == 0) {
-                digit = digit * 2;
-                if (digit > 9)
-                    digit = (digit / 10) + (digit % 10);
-            }
-            sum += digit;
-        }
-        int mod = sum % 10;
-
-        return ((mod == 0) ? 0 : 10 - mod);
     }
 }

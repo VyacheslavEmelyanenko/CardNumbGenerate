@@ -1,25 +1,17 @@
 package com.company.card.mir;
 
-import com.company.utils.CardGenerate;
+import com.company.CardBasic;
 
 /**
- * Class creating CardMasterCardElectronic
+ * Class creating CardMirDebet
  */
-public class CardMirDebet implements ICardMir {
-
-    private String numberFeaCard = "5555";
-    private int numberLength = 17;
-
+public class CardMirDebet extends CardBasic implements ICardMir {
 
     /**
      *Method generating number card
      * @return number card
      */
-    @Override
-    public String getNumber() {
-        String numberBIN = NUMBERFIRST + numberFeaCard;
-        String number = new CardGenerate().generate(numberBIN, numberLength);
-
-        return number;
+    public CardMirDebet() {
+        super(NUMBERFIRST + "5555", 16);
     }
 }

@@ -1,24 +1,17 @@
 package com.company.card.masterCard;
 
-import com.company.utils.CardGenerate;
+import com.company.CardBasic;
 
 /**
  * Class creating CardMasterCardMaestro
  */
-public class CardMasterCardMaestro implements ICardMasterCard {
-
-    private String numberFeaCard = "2222";
-    private int numberLength = 16;
+public class CardMasterCardMaestro extends CardBasic implements ICardMasterCard {
 
     /**
      *Method generating number card
      * @return number card
      */
-    @Override
-    public String getNumber() {
-        String numberBIN = NUMBERFIRST + numberFeaCard;
-        String number = new CardGenerate().generate(numberBIN, numberLength);
-
-        return number;
+    public CardMasterCardMaestro() {
+        super(NUMBERFIRST + "2222", 16);
     }
 }

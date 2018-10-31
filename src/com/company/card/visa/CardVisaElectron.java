@@ -1,24 +1,18 @@
 package com.company.card.visa;
 
+import com.company.CardBasic;
 import com.company.utils.CardGenerate;
 
 /**
- * Class creating CardMasterCardElectronic
+ * Class creating CardVisaElectron
  */
-public class CardVisaElectron implements ICardVisa {
-
-    private String numberFeaCard = "8888";
-    private int numberLength = 16;
+public class CardVisaElectron extends CardBasic implements ICardVisa {
 
     /**
      *Method generating number card
      * @return number card
      */
-    @Override
-    public String getNumber() {
-        String numberBIN = NUMBERFIRST + numberFeaCard;
-        String number = new CardGenerate().generate(numberBIN, numberLength);
-
-        return number;
+    public CardVisaElectron() {
+        super(NUMBERFIRST + "8888", 16);
     }
 }
