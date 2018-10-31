@@ -1,5 +1,6 @@
 package com.company;
 
+import com.company.utils.CardFactory;
 import com.company.valid.CardValidate;
 import com.company.valid.LuhnValidate;
 
@@ -16,12 +17,8 @@ public class Main {
         CardValidate validator = new LuhnValidate();
         for (String typeCard : args) {
 
-            Card card = null;
-            try {
-                card = (Card) CardList.valueOf(typeCard).getCard().newInstance();
-            } catch (InstantiationException | IllegalAccessException e) {
-                e.printStackTrace();
-            }
+            ICard card = CardFactory.getCard(typeCard.toUpperCase());
+
             String number = card.getNumber();
 
             System.out.println(number + " " + validator.validateCard(number));

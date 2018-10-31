@@ -1,6 +1,6 @@
 package com.company.card.mir;
 
-import com.company.generate.CardGenerate;
+import com.company.utils.CardGenerate;
 
 /**
  * Class creating CardMasterCardElectronic

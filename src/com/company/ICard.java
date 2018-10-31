@@ -3,6 +3,6 @@ package com.company;
 /**
  * Interface seting for all card
  */
-public interface Card {
+public interface ICard {
     public String getNumber();
 }

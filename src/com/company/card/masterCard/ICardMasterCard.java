@@ -1,11 +1,11 @@
 package com.company.card.masterCard;
 
-import com.company.Card;
+import com.company.ICard;
 
 /**
  * Interface MasterCard
  */
-public interface ICardMasterCard extends Card {
+public interface ICardMasterCard extends ICard {
 
     String NUMBERFIRST = "5";
 }
