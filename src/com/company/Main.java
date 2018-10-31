@@ -14,12 +14,10 @@ public class Main {
                 card = (Card) CardList.valueOf(typeCard).getCard().newInstance();
             } catch (InstantiationException | IllegalAccessException e) {
                 e.printStackTrace();
-
-
-                String number = card.getNumber();
-
-                System.out.println(number + " " + validator.validateCard(number));
             }
+            String number = card.getNumber();
+
+            System.out.println(number + " " + validator.validateCard(number));
         }
     }
 }

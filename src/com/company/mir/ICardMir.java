@@ -4,5 +4,5 @@ import com.company.Card;
 
 public interface ICardMir extends Card {
 
-    String numberFirst = "2";
+    String NUMBERFIRST = "2";
 }

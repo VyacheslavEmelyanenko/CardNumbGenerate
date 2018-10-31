@@ -4,14 +4,13 @@ import com.company.generate.CardGenerate;
 
 public class CardMasterICardMasterCard implements ICardMasterCard {
 
-    private String number25 = "3333";
-     private String numberFirst = "5";
-
+    private String numberFeaCard = "3333";
     private int numberLength = 19;
 
     @Override
     public String getNumber() {
-        String number = new CardGenerate().generate(numberFirst, numberLength);
+        String numberBIN = NUMBERFIRST + numberFeaCard;
+        String number = new CardGenerate().generate(NUMBERFIRST, numberLength);
         return number;
     }
 }

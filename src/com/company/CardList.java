@@ -21,11 +21,11 @@ public enum CardList {
     CARDMIRPREMIUM(CardMirPremium.class),
     CARDMIRDEBET(CardMirDebet.class);
 
+    private Class card;
+
     CardList(Class card) {
         this.card = card;
     }
-
-    private Class card;
 
     public Class getCard() {
         return card;
