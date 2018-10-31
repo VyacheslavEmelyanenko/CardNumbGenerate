@@ -1,8 +1,8 @@
 package com.company.valid;
 
-/*
-*A class that implements the Luhn algorithm
-*/
+/**
+ * A class that implements the Luhn algorithm
+ */
 public class LuhnValidate extends CardValidate {
     @Override
     public boolean validateCard(String cardNumber) {
@@ -12,6 +12,11 @@ public class LuhnValidate extends CardValidate {
             return false;
     }
 
+    /**
+     * Method seting algoritm Luhn
+     * @param numberCard number card
+     * @return returning true or false
+     */
     private boolean luhn(String numberCard) {
         int s1 = 0;
         int s2 = 0;
