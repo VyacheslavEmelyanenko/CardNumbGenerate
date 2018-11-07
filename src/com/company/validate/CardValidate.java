@@ -1,4 +1,4 @@
-package com.company.valid;
+package com.company.validate;
 
 /**
  * Abstract class that implements the validat
@@ -15,8 +15,8 @@ public abstract class CardValidate {
     }
 
     /**
-     * Abstract method validating card
-     * @param cardNumber number card
+     * Abstract method validating cards
+     * @param cardNumber number cards
      * @return returning true or false
      */
     public abstract boolean validateCard(String cardNumber);

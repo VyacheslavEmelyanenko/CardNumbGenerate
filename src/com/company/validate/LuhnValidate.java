@@ -1,4 +1,4 @@
-package com.company.valid;
+package com.company.validate;
 
 /**
  * A class that implements the Luhn algorithm
@@ -14,7 +14,7 @@ public class LuhnValidate extends CardValidate {
 
     /**
      * Method seting algoritm Luhn
-     * @param numberCard number card
+     * @param numberCard number cards
      * @return returning true or false
      */
     private boolean luhn(String numberCard) {
